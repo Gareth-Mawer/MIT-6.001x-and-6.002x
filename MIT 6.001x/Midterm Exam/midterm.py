@@ -141,6 +141,17 @@ def flatten(aList):
     aList = L
     return aList
 
+# Attempt 2 at Problem 9
+def flatten1(l):
+    L = []
+    for element in l:
+        if type(element) == list:
+            L = L + flatten1(element)
+        else:
+            L.append(element)
+    return L
+
+
 
 
 
